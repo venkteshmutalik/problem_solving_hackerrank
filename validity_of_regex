@@ -1,0 +1,16 @@
+import re
+
+
+t = input()
+
+for _ in range(int(t)):
+    s = input()
+    try:
+        re. compile(s)
+        print("True")
+    except :
+        print("False")
+
+        
+
+    
