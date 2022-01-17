@@ -1,0 +1,29 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+
+
+    
+    
+setA= set(map(int, list(input().split())  ))
+
+lst=[]
+for _ in range(int(input())):
+       setB= set(map(int, list(input().split())  ))
+       lst.append(setB)
+
+p=True
+for i in lst:
+    if (i.issubset(setA)) and len(setA)>len(i):
+        pass
+    else:
+        p=False
+        break
+
+print(p)        
+
+        
+
+   
