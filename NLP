@@ -1,1 +1,14 @@
+# given corpus , finding all sentences
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+corpus = input()
 
+#print(corpus)
+
+
+#sentence = re.compile('[A-Za-z,;'\"\\s]+[.?!]$')
+
+lines = re.findall(r'[A-Za-z0-9 (),""]*[\.!?]', corpus)
+
+for i in lines:
+    print(i)
