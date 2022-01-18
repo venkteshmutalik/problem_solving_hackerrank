@@ -1,0 +1,26 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+setA_n= int(input())
+
+setA= set(map(int,input().split()))
+
+n = int(input())
+
+for i in range(n):
+    # print("hi")
+    operation = input().split()
+    st= set(map(int,input().split()))
+    
+    
+    # print(operation,st)
+    if operation[0].startswith("intersection_update"):
+        setA.intersection_update(st)
+    elif operation[0].startswith("update"):
+        setA.update(st) 
+    elif operation[0].startswith("symmetric_difference_update"):
+        setA.symmetric_difference_update(st) 
+    elif operation[0].startswith("difference_update"):
+        setA.difference_update(st) 
+    # print(setA)
+        
+print(sum(setA))
