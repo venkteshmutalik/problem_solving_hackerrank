@@ -1,0 +1,17 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+a = input().split()
+
+s=a[0]
+b = int(a[1])
+
+from itertools import permutations
+
+
+
+# print(s,b)
+k=["".join(j)  for j  in list(permutations(s,b))]
+k.sort()
+
+for p in k :
+    print(p)
