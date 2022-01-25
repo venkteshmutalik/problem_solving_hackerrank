@@ -1,0 +1,18 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+n=int(input())
+for _ in range(n):
+    p= input().split()
+    
+    a=p[0]
+    b= p[1]
+
+
+    try :
+        
+        print(int(a)//int(b))
+    except ZeroDivisionError as k:
+        print("Error Code:",k)
+    except ValueError as e:
+        print("Error Code:",e)
+   # print(divmod(a,b))  # returns a tuple ( quotient , remainder )
