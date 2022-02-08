@@ -1,0 +1,19 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+k = input()
+
+values = list(map(int,input().split()))
+
+#print(values)
+list1=[]
+list2=[]
+
+
+for i in values :
+     
+    list1.append(str(i)[::-1] == str(i))
+    list2.append(i>0)
+  
+print(all(list2) and any(list1))
+    
