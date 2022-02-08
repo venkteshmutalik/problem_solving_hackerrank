@@ -1,0 +1,35 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+temp = input()
+
+
+import re 
+ans=""
+
+res = re.findall('[a-z]',temp)
+res = "".join(sorted(res))
+
+ans= ans+res
+
+
+res = re.findall('[A-Z]',temp)
+res = "".join(sorted(res))
+
+ans= ans+res
+
+
+
+res = re.findall('[13579]',temp)
+res = "".join(sorted(res))
+
+ans= ans+res
+
+
+
+res = re.findall('[24680]',temp)
+res = "".join(sorted(res))
+
+ans= ans+res
+
+
+print(ans)
