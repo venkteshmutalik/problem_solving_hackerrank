@@ -1,0 +1,32 @@
+import re
+
+
+def fun(s):
+    
+   
+    u = re.compile(r'[a-zA-Z0-9_-]+@[a-zA-Z0-9]+\.([a-zA-Z])')
+   
+   
+    
+    if u.match(s):
+         t=s.split('.')
+         if len(t[1]) in[1,2,3]:
+             
+            return True
+    
+    return False
+   
+    # return True if s is a valid email, else return False
+
+def filter_mail(emails):
+    return list(filter(fun, emails))
+
+if __name__ == '__main__':
+    n = int(input())
+    emails = []
+    for _ in range(n):
+        emails.append(input())
+
+filtered_emails = filter_mail(emails)
+filtered_emails.sort()
+print(filtered_emails)
