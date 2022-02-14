@@ -1,0 +1,48 @@
+Defaultdict is a container like dictionaries present in the module collections.
+Defaultdict is a sub-class of the dictionary class that returns a dictionary-like object. 
+The functionality of both dictionaries and defaultdict are almost same except for the fact that defaultdict never raises a KeyError. 
+It provides a default value for the key that does not exists.
+
+
+
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+from collections import defaultdict
+
+values = list(map(int,input().split()))
+n= values[0]
+m=values[1]
+
+list_n=defaultdict(lambda: "-1")
+list_m=defaultdict(lambda: "-1")
+for i in range(n):
+    list_n[i]=input()
+    
+for j in range(m):
+    list_m[j]=input()
+    
+ans=[]   
+for j in list(list_m.values()):
+    temp=[]
+    flag=False
+    for k,v in list_n.items():
+        
+        if v == j:
+         temp.append(k+1)
+         flag=True
+         
+    if flag:
+      ans.append(temp)
+    else :
+      ans.append(list_n[j])   
+
+# print(ans)
+for item in ans:
+    
+    if item=="-1":
+        print(item)
+    else:
+        for i in item:
+            print(i,end=" ")
+        print()
