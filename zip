@@ -1,0 +1,23 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+
+values = list(map(int,input().split()))
+
+num_of_studs= values[0]
+num_of_subs = values[1]
+
+# print(num_of_studs)
+students=[]
+subjects=[]
+
+# print(values)
+for j in range(num_of_subs):
+    # print(j)
+    subjects.append(list(map(float,input().split())))
+        
+
+for item in list(zip(*subjects)):                               # * is one of Unpacking Operators in Python
+
+    avg=sum(item)/len(item) 
+    print(round(avg,1))                                        # round to round of a float to particular value 
+    # print("%.1f"%avg)
