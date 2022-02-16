@@ -1,0 +1,40 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import math
+import itertools
+values = list(map(int,input().split()))
+
+k=values[0]
+m=values[1]
+
+f= lambda x:x*x
+
+
+lst=[]
+max_lst=[]
+for i in range(k):
+    temp=list(map(int,input().split()))
+    
+    temp=[abs(i) for i in temp ]
+    
+    temp=temp[1:]
+   # max_lst.append(max(temp)) 
+    lst.append(temp)
+    
+# max_sq=[]
+comb = itertools.product(*lst)                        # gives a cross product 
+# max_sq=[f(i) for i in max_lst]
+# ans = sum(max_sq) %m
+trial= list(comb)
+
+
+#print(trial)
+ans=[]
+for item in trial:
+    sum1=0
+    for i in item:
+        i=f(i)
+        sum1 = sum1+i
+    ans.append(sum1%m)
+    
+print((max(ans)))
+        
